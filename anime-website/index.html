@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniVerse - Discover Your Next Anime</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+<!-------- Modern Header -------->
+<header class="main-header" id="header">
+    <div class="header-container">
+        <div class="header-brand">
+            <span class="brand-logo">AniVerse</span>
+        </div>
+
+        <div class="header-search">
+            <div class="search-wrapper">
+                <i class="bx bx-search search-icon"></i>
+                <input
+                    type="text"
+                    id="search-input"
+                    class="search-input"
+                    placeholder="Search anime..."
+                >
+            </div>
+        </div>
+        <!-- ❌ Theme toggle removed (dark mode only) -->
+    </div>
+</header>
+
+<!-------- Hero Section -------->
+<section class="hero-section" id="home">
+    <div id="hero-loading" class="hero-loading">
+        <div class="loader"></div>
+        <p>Loading featured anime...</p>
+    </div>
+
+    <div class="hero-swiper swiper" id="hero-swiper" style="display: none;">
+        <div class="swiper-wrapper" id="hero-wrapper">
+            <!-- Hero slides injected via JS -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-------- Main Content -------->
+<main class="main-content">
+
+    <!-------- Trending Anime -------->
+    <section class="content-section" id="movies">
+        <div class="section-header">
+            <h2 class="section-title">Trending Anime</h2>
+        </div>
+
+        <div id="loading-message" class="loading-message">
+            <div class="loader"></div>
+            <p>Loading anime...</p>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <div class="anime-grid" id="movies-container">
+            <!-- Anime cards injected via JS -->
+        </div>
+    </section>
+
+    <!-------- Coming Soon -------->
+    <section class="content-section" id="coming">
+        <div class="section-header">
+            <h2 class="section-title">Coming Soon</h2>
+        </div>
+
+        <div id="coming-loading" class="loading-message" style="display: none;">
+            <div class="loader"></div>
+            <p>Loading upcoming anime...</p>
+        </div>
+
+        <div class="coming-swiper swiper" id="coming-swiper">
+            <div class="swiper-wrapper" id="coming-wrapper">
+                <!-- Coming soon cards injected via JS -->
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-------- Newsletter -------->
+<section class="newsletter-section" id="newsletter">
+    <div class="newsletter-container">
+        <h2 class="newsletter-title">Stay Updated</h2>
+        <p class="newsletter-subtitle">
+            Get notified about new releases and updates
+        </p>
+
+        <form class="newsletter-form" action="">
+            <input
+                type="email"
+                class="newsletter-input"
+                placeholder="Enter your email"
+                required
+            >
+            <button type="submit" class="btn-primary">
+                Subscribe
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-------- Footer -------->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <span class="brand-logo">AniVerse</span>
+            <p class="footer-tagline">
+                Explore worlds beyond imagination
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2025 AniVerse. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-------- Anime Details Modal -------->
+<div id="anime-modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+
+        <div class="modal-body">
+            <img id="modal-poster" src="" alt="Anime Poster">
+
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+
+                <div class="modal-meta">
+                    <span id="modal-score"></span>
+                    <span id="modal-status"></span>
+                    <span id="modal-episodes"></span>
+                </div>
+
+                <div id="modal-genres" class="modal-genres"></div>
+                <p id="modal-synopsis"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="./index.js"></script>
+
+</body>
+</html>
