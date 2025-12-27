@@ -116,8 +116,8 @@ AniVerse/
 
 ## 👤 Author
 
-**AniVerse**  
-© 2025 AniVerse. All rights reserved.
+**ABAD JOHN MARK**  
+All rights reserved.
 
 ---
 
